@@ -1,0 +1,21 @@
+services:
+
+  app:
+
+    build:
+      context: ./Basic
+
+    ports:
+      - "4321:4321" 
+      
+
+    volumes:
+      - ./Basic:/app
+      - node_modules_data:/app/node_modules 
+
+    working_dir: /app
+
+    command: pnpm dev
+
+volumes:
+  node_modules_data:
