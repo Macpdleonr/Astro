@@ -1,7 +1,5 @@
 .pnpm-store
 
-node_modules
+.DS_Store
 
-.pnpm-debug.log
-
-/dist
+.vscode/
