@@ -1,7 +1,7 @@
 ---
 title: 'Learning Git and Github'
 author: Macpdleonr
-img: learning-git.jpg
+img: senior.png
 readtime: 224
 description: Learning to use Git and Github for gestion your proyects of code
 buy:
