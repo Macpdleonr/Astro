@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const books = [
-	{}
-]
+const books = await getCollection('books')
+
+console.log(books)
+
 ---
 
 <Layout title="Astro Basics">
