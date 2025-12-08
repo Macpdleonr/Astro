@@ -23,7 +23,10 @@ console.log(books)
 						const {title, author, img, readtime, description, buy } = data
 						return (
 							<article class="flex">
-								<img src={`/${img}`} alt={title} class="w-full rounded-lg"/>
+								<a href={`/books/${slug}`} class="mb-2 xl:mb-0 transition hover:scale-110">
+									<img src={`/${img}`} alt={title} class="w-full rounded-lg"/>
+								</a>
+								
 								<h3>{title}</h3>
 							</article>
 						)
