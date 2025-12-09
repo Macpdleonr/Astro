@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+
+  const mangas = await getCollection("mangas");
+  return mangas.map((manga) => ({
+    params: { id: manga.slug },
+    props: { manga }
+  }))
+}
+
+const { manga } = Astro.props;
+const { data } = manga;
+const { title, author, img, readtime, description, buy } = data;
+---
+
+<Layout title={`${title} - Dev Mangas`}>
+  <h1>{title}</h1>
