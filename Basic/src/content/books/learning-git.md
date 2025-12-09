@@ -5,7 +5,6 @@ img: senior.png
 readtime: 224
 description: Learning to use Git and Github for gestion your proyects of code
 buy:
-  spain: https://a.co/d/4U6IL3R
   usa: https://a.co/d/hq4Hvsx
 ---
 
