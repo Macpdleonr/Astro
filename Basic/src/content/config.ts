@@ -2,7 +2,7 @@ import { defineCollection, z } from "astro:content";
 
 // z --> Zod schema definitions for content validation
 
-const books = defineCollection({
+const mangas = defineCollection({
   schema: z.object({
     title: z.string(),
     author: z.string(),
@@ -16,4 +16,4 @@ const books = defineCollection({
   })
 })
 
-export const collections = {books}
+export const collections = {mangas}
