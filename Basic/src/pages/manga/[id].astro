@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -14,7 +14,21 @@ export async function getStaticPaths() {
 const { manga } = Astro.props;
 const { data } = manga;
 const { title, author, img, readtime, description, buy } = data;
+
+const { Content } = await render(manga);
 ---
 
 <Layout title={`${title} - Dev Mangas`}>
-  <h1>{title}</h1>
+  <div class="flex gap-12">
+    <aside class="flex flex-col items-center gap-4">
+      <img class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
+    </aside>
+
+    <main class="max-w-3xl">
+      <h1 class="text-4xl font-bold mb-4">{title}</h1>
+      <div class="prose prose-invert">
+        <Content />
+      </div>
+    </main>
+  </div>
+</Layout>
