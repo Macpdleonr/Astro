@@ -1,11 +1,10 @@
 ---
 title: 'SHAMAN KING Omnibus'
-author: Kodansha Comics
-img: Yoh Sit.jpg
+author: Hiroyuki Takei
+img: yoh.jpg
 readtime: 300
-description: After starting out as an assistant on the samurai manga Rurouni Kenshin, Hiroyuki Takei in 1998 created Shaman King, which would go on to become a smash hit Shonen Jump adventure with an anime adaptation broadcast on Fox. Its success led to three spinoff and sequel manga. His cited influences include Osamu Tezuka, Hiroaki Samura's Blade of the Immortal, and Mike Mignola's Hellboy.
+description: Shaman King is a supernatural fantasy manga/anime about Yoh Asakura, a laid-back shaman who teams up with the ghost of a samurai warrior, Amidamaru, to compete in the "Shaman Fight," a tournament held every 500 years for shamans to battle for the title of Shaman King and control over the Great Spirit to guide humanity's future. The series follows Yoh and his friends as they fight evil spirits, form bonds, and confront powerful rivals, including Yoh's twin brother, Hao. 
 buy:
-  spain: https://a.co/d/4U6IL3R
   usa: https://a.co/d/7pLqYAK
 ---
 
