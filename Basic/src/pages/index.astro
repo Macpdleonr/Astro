@@ -19,8 +19,8 @@ console.log(mangas)
 		<div class="px-4 mx-auto max-w-screen-7xl">
 			<div class="grid gap-6 md:grid-cols-2">
 				{
-					mangas.map(mangas => {
-						const {slug, data } = mangas
+					mangas.map(manga => {
+						const {slug, data } = manga
 						const {title, author, img, readtime, description, buy } = data
 						return (
 							<article class="flex">
