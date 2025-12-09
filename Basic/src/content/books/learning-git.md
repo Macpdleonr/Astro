@@ -1,9 +1,11 @@
 ---
-title: 'Learning Git and Github'
+title: 'Gantz '
 author: Macpdleonr
 img: senior.png
 readtime: 224
-description: Learning to use Git and Github for gestion your proyects of code
+description: An erotic, science-fiction horror epic, Hiroya Oku's Gantz is a sensation in Japan, setting the bar for outrageous, shocking, and bizarre manga, not for children or the easily offended! Over 650 pages of mayhem and madness
+
+Tokyo teens Kei and Masaru are struck dead by a subway train but awaken in a room with an ominous black orb that gives them weapons, suits . . . and orders. Fighting and endless stream of bizarre alien monstrosities in a deadly game, will they win their freedom or die for the final time?
 buy:
   usa: https://a.co/d/hq4Hvsx
 ---
