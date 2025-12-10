@@ -18,6 +18,8 @@ const { data, slug } = manga;
 const { title, author, img, readtime, description, buy } = data;
 
 const { Content } = await render(manga);
+
+export const prerender = true
 ---
 
 <Layout title={`${title} - Dev Mangas`}>
@@ -28,7 +30,9 @@ const { Content } = await render(manga);
       
       <img transition:name={`img-${slug}`} class="rounded w-72 h-auto" src={`/${img}`} alt={title} />
       
-      <MangaScore id={slug}/>
+      <MangaScore server:defer id={slug}>
+        <span slot="fallback" class="text-xs opacity-70">Charging Score ...</span>
+      </MangaScore>
       
       {
         SHOW_BUY_BUTTON && (
