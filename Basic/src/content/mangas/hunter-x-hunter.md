@@ -6,6 +6,7 @@ readtime: 280
 description: Hunter x Hunter is a popular Japanese manga/anime about a young boy, Gon Freecss, who leaves home to become a licensed "Hunter" (elite adventurers for dangerous jobs) to find his missing, legendary father, Ging, leading him on a world-spanning adventure with friends like Killua, Kurapika, and Leorio, discovering a world of supernatural powers (Nen), dangerous creatures, and complex moral challenges.  
 buy:
   usa: https://a.co/d/cYOGhGV
+  spain: htttps://
 ---
 
 Plucky Gon’s quest to find his dad leads him into a whole world of crazy adventure.
