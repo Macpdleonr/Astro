@@ -6,7 +6,7 @@ readtime: 270
 description: Yu Yu Hakusho is a classic Japanese manga and anime series about delinquent teen Yusuke Urameshi, who dies saving a child, gets resurrected as a Spirit Detective, and investigates supernatural cases with allies Kuwabara, Kurama, and Hiei, transitioning from detective work to intense spirit-powered battles against demons and other threats, becoming a beloved shonen action story. 
 buy:
   usa: https://a.co/d/dhhiQyr
-  
+  spain: htttps://
 ---
 
 A delinquent’s gotta do what he’s gotta do…in the afterlife.
