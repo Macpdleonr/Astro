@@ -6,6 +6,7 @@ readtime: 224
 description: It tells the story of Kei Kurono and Masaru Kato, who die in a train accident and become part of a semi-posthumous "game" in which they and several other recently deceased people are forced to hunt and kill aliens armed with a handful of futuristic items, equipment, and weapons.
 buy:
   usa: https://a.co/d/it4Hh5y
+  spain: htttps://
 ---
 
 An erotic, science-fiction horror epic, Hiroya Oku's Gantz is a sensation in Japan, setting the bar for outrageous, shocking, and bizarre manga, not for children or the easily offended! Over 650 pages of mayhem and madness
