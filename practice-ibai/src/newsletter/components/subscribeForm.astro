@@ -2,7 +2,12 @@
 import { actions } from  'astro:actions';
 ---
 <section class="w-full max-w-xl mx-auto">
-  <form method="POST" id="newsletter-form" class="flex flex-col gap-4" action={actions.newsletter}>
+  <form 
+    method="POST" 
+    id="newsletter-form" 
+    class="flex flex-col gap-4" 
+    action={actions.newsletter}
+  >
     <div class="flex flex-col sm:flex-row gap-3">
       <input 
         name="email" 
@@ -26,3 +31,9 @@ import { actions } from  'astro:actions';
     </div>
   </form>
 </section>
+
+<script>
+  import { actions } from "astro:actions";
+
+  const form = document.getElementById("newsletter-form")
+</script>
