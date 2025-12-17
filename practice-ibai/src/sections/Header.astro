@@ -1,10 +1,34 @@
 <header class="pt-24">
   <div class="relative">
-    <img class="animate-fade-in-up max-w-xl mx-auto" src="/favicon.svg" alt="Logo" />
-    <img class="animate-fade-in-up absolute top-0 left-0 blur-sm w-full h-full" src="/favicon.svg" alt="Logo" />
+    <img 
+      class="animate-fade-in-up max-w-xl mx-auto" 
+      src="/favicon.svg" 
+      alt="Logo" 
+    />
+
+    <img 
+      class="animate-fade-in-up absolute top-0 left-0 blur-sm w-full h-full
+      opacity-50 -z-10 pulse" 
+      src="/favicon.svg" 
+      alt="Logo" 
+    />
   </div>
 </header>
 
 <style>
 
+  @keyframes pulse {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.75;      
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  .pulse {
+    animation: pulse 2s infinite;
+  }
 </style>
