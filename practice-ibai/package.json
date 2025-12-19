@@ -11,9 +11,11 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.4",
+    "canvas-confetti": "^1.9.4",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
-    "@midudev/tailwind-animations": "^0.2.0"
+    "@midudev/tailwind-animations": "^0.2.0",
+    "@types/canvas-confetti": "^1.9.0"
   }
 }
