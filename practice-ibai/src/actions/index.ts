@@ -1,4 +1,4 @@
-import { defineAction } from "astro:actions";
+import { ActionError, defineAction } from "astro:actions";
 import { z } from "astro:schema";
 
 export const server = {
@@ -8,6 +8,13 @@ export const server = {
     }),
     async handler( {email} ){
       console.log({ email });
+
+      if (email == "test@test.com"){
+        throw new ActionError({
+          code: 'BAD_REQUEST',
+          message:'User is not valid'
+        })
+      }
 
       return { 
         success: true,
