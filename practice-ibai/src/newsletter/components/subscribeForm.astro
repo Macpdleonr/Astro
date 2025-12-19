@@ -34,7 +34,8 @@ import { actions } from  'astro:actions';
 
 <script>
   import { actions } from "astro:actions";
-
+  import { throwConfetti } from '@/utils/confetti';
+  
   const form = document.getElementById("newsletter-form") as HTMLFormElement
 
   console.log(form)
@@ -54,6 +55,7 @@ import { actions } from  'astro:actions';
 
     if (data) {
       console.log(data)
+      throwConfetti()
     }
     
   })
