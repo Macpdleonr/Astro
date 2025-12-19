@@ -7,7 +7,12 @@ export const server = {
       email: z.string().email()
     }),
     async handler( {email} ){
-      console.log(email);
+      console.log({ email });
+
+      return { 
+        success: true,
+        message: "Email saved!"
+      }
     }
   })
 }
