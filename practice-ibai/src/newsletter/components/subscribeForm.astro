@@ -35,7 +35,26 @@ import { actions } from  'astro:actions';
 <script>
   import { actions } from "astro:actions";
 
-  const form = document.getElementById("newsletter-form")
+  const form = document.getElementById("newsletter-form") as HTMLFormElement
 
-  form?.addEventListener("submit", async (e) => {})
+  console.log(form)
+
+  form.addEventListener("submit", async (e) => {
+    console.log("submit")
+    e.preventDefault()
+
+    const formData = new FormData(form)
+    const email = formData.get("email") as string
+
+    const { data, error } = await actions.newsletter({ email })
+
+    if (error) {
+      console.error(error)
+    }
+
+    if (data) {
+      console.log(data)
+    }
+    
+  })
 </script>
