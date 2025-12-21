@@ -33,16 +33,18 @@ import { actions } from  'astro:actions';
 </section>
 
 <script>
-  import { actions } from "astro:actions";
+  import { actions, isInputError } from "astro:actions";
   import { throwConfetti } from '@/utils/confetti';
   
   const form = document.getElementById("newsletter-form") as HTMLFormElement
+  const message = document.getElementById("newsletter-message") as HTMLDivElement
 
-  console.log(form)
+  message.classList.add("hidden")
+  message.classList.remove("text-red-500", "text-green-500")
 
-  form.addEventListener("submit", async (e) => {
+  form.addEventListener("submit", async (event) => {
     console.log("submit")
-    e.preventDefault()
+    event.preventDefault()
 
     const formData = new FormData(form)
     const email = formData.get("email") as string
@@ -50,12 +52,20 @@ import { actions } from  'astro:actions';
     const { data, error } = await actions.newsletter({ email })
 
     if (error) {
-      console.error(error)
+      const messageText = isInputError(error) ? error?.fields?.email?.join(", ") : error.message
+
+      message.textContent = messageText ?? "Error subscribing to newsletter"
+
+      message.classList.remove("hidden")
+      message.classList.add("text-red-500")
+
     }
 
     if (data) {
-      console.log(data)
       throwConfetti()
+      message.textContent = data.message
+      message.classList.remove("hidden")
+      message.classList.add("text-green-500")
     }
     
   })
