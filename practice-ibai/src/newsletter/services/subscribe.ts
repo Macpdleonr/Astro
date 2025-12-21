@@ -5,8 +5,17 @@ export const saveNewsLetterEmail = async (email: string) => {
   const {data, error } = await supabase.from('newsletter').insert({email})
 
   if (error) {
-    throw new Error(error.message)
+
+    console.error(error)
+    
+    return {
+      success: false,
+      message: "Error saving email"
+    }
   }
 
-  return data
+  return {
+    success: true,
+    error: null
+  }
 }
