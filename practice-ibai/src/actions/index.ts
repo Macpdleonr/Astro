@@ -5,13 +5,13 @@ import { z } from "astro:schema";
 export const server = {
   newsletter: defineAction({
     input: z.object({
-      email: z.string().email()
+      email: z.string().email('Sorry, that email is not valid.'),
     }),
     async handler( {email} ){
 
       const { success, duplicated, error }= await saveNewsLetterEmail(email)
 
-      if (!success){
+      if (!success) {
         throw new ActionError({
           code: 'BAD_REQUEST',
           message: error ?? 'Error saving email'
