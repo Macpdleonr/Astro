@@ -1,3 +1,4 @@
+import { saveNewsLetterEmail } from "@/newsletter/services/subscribe";
 import { ActionError, defineAction } from "astro:actions";
 import { z } from "astro:schema";
 
@@ -7,12 +8,13 @@ export const server = {
       email: z.string().email()
     }),
     async handler( {email} ){
-      console.log({ email });
 
-      if (email == "test@test.com"){
+      const { success, error }= await saveNewsLetterEmail(email)
+
+      if (!success){
         throw new ActionError({
           code: 'BAD_REQUEST',
-          message:'User is not valid'
+          message: error ?? 'Error saving email'
         })
       }
 
