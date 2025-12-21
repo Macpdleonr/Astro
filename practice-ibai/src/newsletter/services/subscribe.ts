@@ -4,24 +4,23 @@ const ERROR_CODE_ALREADY_EXISTS = '23505'
 
 export const saveNewsLetterEmail = async (email: string) => {
 
-  const {data, error } = await supabase.from('newsletter').insert({email})
+  const { error } = await supabase.from('newsletter').insert({email})
 
   if (error?.code === ERROR_CODE_ALREADY_EXISTS) {
     return {
       duplicated: true,
       success: true,
-      message: "Email already subscribed"
+      error: null
     }
   }
 
   if (error) {
-
     console.error(error)
 
     return {
       duplicated: false,
       success: false,
-      message: "Error saving email"
+      error: "Error saving email"
     }
   }
 
