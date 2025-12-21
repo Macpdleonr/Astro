@@ -9,13 +9,20 @@ export const server = {
     }),
     async handler( {email} ){
 
-      const { success, error }= await saveNewsLetterEmail(email)
+      const { success, duplicated, error }= await saveNewsLetterEmail(email)
 
       if (!success){
         throw new ActionError({
           code: 'BAD_REQUEST',
           message: error ?? 'Error saving email'
         })
+      }
+      
+      if (duplicated) {
+        return {
+          success: true,
+          message:  'This email is already subscribed to the newsletter.'
+        }
       }
 
       return { 
