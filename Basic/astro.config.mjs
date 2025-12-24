@@ -2,7 +2,8 @@
 import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
-import node from '@astrojs/node';
+// import node from '@astrojs/node'; for localhost with node
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,7 +20,9 @@ export default defineConfig({
       }
     },
 
-  adapter: node({
+  /* adapter: node({
     mode: 'standalone'
-  })
+  }) */
+    
+  adapter: vercel()
 });
