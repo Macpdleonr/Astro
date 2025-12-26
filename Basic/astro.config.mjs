@@ -3,7 +3,9 @@ import { defineConfig, envField } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 // import node from '@astrojs/node'; for localhost with node
-import vercel from '@astrojs/vercel';
+// import vercel from '@astrojs/vercel';
+
+import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,10 +21,10 @@ export default defineConfig({
         SCORE_API_ENDPOINT: envField.string({ context: 'server', access: 'public' }),
       }
     },
-
+    adapter: cloudflare(),
   /* adapter: node({
     mode: 'standalone'
   }) */
     
-  adapter: vercel()
+  // adapter: vercel()
 });
